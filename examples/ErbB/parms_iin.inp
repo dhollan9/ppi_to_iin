@@ -1,0 +1,20 @@
+127 # npro
+268 # nedge
+0 # min complex
+20 #Num constraints 
+4 #gamma
+0.5 #mu
+50000 #Nit_net
+0 #Nitequil
+1 #MC Net T
+2.3 #alpha
+1000 #netwrite
+1 #phi
+2 #flagsplit
+4 #NentAvg
+500 #QPsolveonly alpha
+1 #matrixflag 1=yes
+0.02 #omega
+0.1 #zeta
+2 #PAEflag
+0 #fitnessflag

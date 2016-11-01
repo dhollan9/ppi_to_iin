@@ -1,0 +1,49 @@
+To run code, set parms_iin.inp to desired parameters.
+
+./mc_iin_opt.exe parms_iin.inp ErbB_Pro_Names.inp ErbB_Edges_new.txt ErbB_IIN_Reduced_new.txt
+
+The last argument is not necessary if you use flagsplit=0 or flagsplit=1.
+
+The parameters do the following
+
+****PPIN parameters****
+
+npro: Number of proteins in the network
+nedge: Number of protein-protein interactions in the network
+
+****Fitness function parameters****
+
+gamma: (Called "beta" in outputs) Penalizes high clustering (triangles)
+alpha: (Called "ksi" or "kappa" in outputs) Penalizes unclosed chains
+mu: Penalizes a high number of interfaces, either on individual proteins or absolute number in the system depending on the fitness function used
+omega: Penalizes extra edges, ie more than one binding mode between a pair of proteins
+zeta: Only used for fitnessflag=2. Zeta penalizes self-looped nodes with other connections
+MCTemp: The "temperature" for the Boltzmann probability distribution, kBT. A high MCTemp makes suboptimal moves more likely to be accepted
+
+****flagsplit****
+
+0: Initializes from the "dense" initial state, where each protein has one interface
+1: Initializes from the "sparse" initial state, where each edge has a separate interface on each protein.
+
+2: Initializes from a manually defined network (the fourth input)
+
+****PAEflag****
+
+0: Calculates the PAE by stochastically generating networks to compare the IIN degree distribution to each iteration. This process is very slow
+
+1: Reads in a file ("PMFfile.txt") containing degree distributions for different network sizes and densities and different PAEs. Compares to the IIN to find the best fit PAE.
+
+2: Calculates the index of dispersion (variance/mean) of the degree distribution instead of the PAE
+
+****fitnessflag****
+
+0: Penalizes a high number of interfaces per protein
+
+1: Penalizes the absolute number of interfaces in the network
+
+2: Penalzies the absolute number of interfaces in the network, and any self-looped nodes with high degree
+
+****Other****
+
+The other parameters are for older versions of the code and do not need to be changed.
+
