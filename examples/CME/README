@@ -32,6 +32,9 @@ MCTemp: The "temperature" for the Boltzmann probability distribution, kBT. A hig
 0: Calculates the PAE by stochastically generating networks to compare the IIN degree distribution to each iteration. This process is very slow
 
 1: Reads in a file ("PMFfile.txt") containing degree distributions for different network sizes and densities and different PAEs. Compares to the IIN to find the best fit PAE.
+IF YOU WISH TO USE THIS OPTION then you must create the PMFfile.txt file. Do this with the bash command:
+cat PMFfile.txta* >> PMFfile.txt
+Github does not allow storage of large files, which was why this was broken up.
 
 2: Calculates the index of dispersion (variance/mean) of the degree distribution instead of the PAE
 
