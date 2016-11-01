@@ -16,5 +16,5 @@
 1 #matrixflag 1=yes
 0.1 #omega
 0 #zeta
-1 #PAEflag
+2 #PAEflag
 1 #fitnessflag
