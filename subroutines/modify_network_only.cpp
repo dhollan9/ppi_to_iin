@@ -99,7 +99,8 @@ void modify_network_only(int nwhole, int ninterface, int *numpartners, int **Spe
     //End variables
   
 //Read in pmf file
-  readPMFfile(pmf_file, sampPMFs, pmflines);
+  if(PAEflag==1)
+    readPMFfile(pmf_file, sampPMFs, pmflines);
 
   //Create output file
   char fname[300];
