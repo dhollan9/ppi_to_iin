@@ -28,6 +28,8 @@ libm
 libquadmath
 libstdc++
 
+The Windows command line does not use bash, and thus you must have a GNU tool if you wish to run this code on a Windows machine.
+
 If you have a library installed but the Makefile cannot find it, try adding the library path to the LIBS variable. An example path is
 -L/usr/local/lib
 The Makefile will search this folder for any relevant libraries.
