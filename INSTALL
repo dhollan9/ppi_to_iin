@@ -1,0 +1,33 @@
+***Compiling***
+
+If you have all the prerequisites, you only need to use the command
+
+  make
+
+to compile the program.
+
+***Prerequisites***
+
+You will need a C/C++ compiler, such as g++. This code requires the following libraries
+
+This code requires the following libraries:
+
+Linux systems:
+libgsl
+libgfortran
+libm
+libblas
+libstdc++
+
+libblas may be replaced with libg2c if you do not have it, but you must change the Makefile (change all instances of -lblas to -lg2c)
+
+Mac systems:
+libgsl
+libgfortran
+libm
+libquadmath
+libstdc++
+
+If you have a library installed but the Makefile cannot find it, try adding the library path to the LIBS variable. An example path is
+-L/usr/local/lib
+The Makefile will search this folder for any relevant libraries.
