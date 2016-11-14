@@ -10,7 +10,6 @@ FLIBSLIN    =  -L/usr/lib/gcc/x86_64-redhat-linux/4.1.2 -L/usr/lib/gcc/x86_64-re
 FLIBSMAC    =  -L/usr/local/gfortran/lib/gcc/x86_64-apple-darwin12/4.8.2 -L/usr/local/gfortran/lib/gcc/x86_64-apple-darwin12/4.8.2/../../.. -L/usr/local/lib -L/usr/lib -lgsl -lgfortran -lquadmath -lm -lstdc++ -framework accelerate
 
 LIBS   = $(shell gsl-config --libs)
-LIBS  += $(MA27LIB) $(BLAS)
 
 CC     = g++
 BDIR   = bin
